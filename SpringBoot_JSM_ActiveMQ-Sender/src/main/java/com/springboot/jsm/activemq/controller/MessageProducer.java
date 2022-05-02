@@ -14,9 +14,9 @@ public class MessageProducer {
     @Autowired
     MessageProducerService messageProducerService;
 
-    @GetMapping("/sendmessage/{message}")
-    public String produceMessage(@PathVariable String message) {
-        messageProducerService.sendMessage(message);
+    @GetMapping("/sendmessage")
+    public String produceMessage() {
+        messageProducerService.sendMessage();
         return "Message sent successfully!";
     }
 
